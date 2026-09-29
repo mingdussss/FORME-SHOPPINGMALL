@@ -1,7 +1,7 @@
 const saleUlTag = document.querySelector('.sale');
 let result = productArray.map(product => {
     return `<li>
-                <a href="#">
+                <a href="./product.html?pid=${product.pid}">
                     <figure><img src="./img/${product.pthumbFileName}" alt="${product.pname}"></figure>
                     <div class="sale-txt">
                         <h4 class="title-1">${product.pname}</h4>

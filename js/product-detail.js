@@ -9,7 +9,10 @@ function applyProductFromQuery() {
     const requestedId = Number(params.get('id') ?? params.get('pid'));
     if (!Number.isFinite(requestedId)) return;
 
-    const product = newProductArray.find((item) => item.pid === requestedId);
+    const products = typeof productArray === 'undefined'
+        ? newProductArray
+        : [...productArray, ...newProductArray];
+    const product = products.find((item) => item.pid === requestedId);
     if (!product) return;
 
     const discountRate = Number(product.pdiscount) || 0;
