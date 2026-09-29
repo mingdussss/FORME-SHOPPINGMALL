@@ -4,10 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lumi Curve Modular Sofa | FORME</title>
+    <title>FORME쇼핑몰 - 포트폴리오페이지</title>
 
     <!-- 기본 SEO -->
-    <title>FORME쇼핑몰 - 포트폴리오페이지</title>
     <meta name="description"
         content="FORME는 감각적인 디자인과 편안한 사용성을 담은 모던 가구 브랜드입니다. 소파, 테이블, 체어, 침대부터 조명과 수납 가구까지 공간에 어울리는 컬렉션을 만나보세요." />
 
@@ -34,15 +33,30 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/header.css">
-    <link rel="stylesheet" href="./css/product.css?v=20260922-1">
+    <link rel="stylesheet" href="./css/product.css?v=20260928-2">
     <link rel="stylesheet" href="./css/footer.css">
 
     <script src="./js/header.js" defer></script>
+    <script src="./js/parameter.js"></script>
+    <script src="./js/won.js"></script>
     <script src="./js/new-product.js"></script>
-    <script src="./js/product-detail.js?v=20260923-1" defer></script>
+    <script src="./js/review.js?v=20260928-2"></script>
+    <script src="./js/product-detail.js?v=20260928-1" defer></script>
+    <script src="./js/review-control.js?v=20260928-2" defer></script>
+    <script src="./js/product-ui.js?v=20260928-1" defer></script>
 </head>
 
 <body>
+    <script>
+        const requestedProductId = Number(getParameter('id') ?? getParameter('pid') ?? 6);
+        const productInfo = newProductArray.find(function (item) {
+            return item.pid === requestedProductId;
+        }) ?? newProductArray[0];
+
+        const reviewInfo = reviewArray.filter(function (item) {
+            return item.pid === productInfo.pid;
+        });
+    </script>
 
     <!-- 데스크탑용 헤더 -->
     <header class="pc">
@@ -807,59 +821,6 @@
                                 </div>
                                 <div class="review-etc">
                                     <button type="button">♡ 유용해요 <span>12</span></button>
-                                    <a href="#">신고/차단</a>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="review-user">
-                                <span class="rev-name">김*현</span>
-                                <span class="rev-date">2026.09.12</span>
-                            </div>
-                            <div class="review-content">
-                                <div class="stars" aria-label="별점 5점">
-                                    <img src="./img/star.svg" alt=""><img src="./img/star.svg" alt=""><img src="./img/star.svg" alt=""><img src="./img/star.svg" alt=""><img src="./img/star.svg" alt="">
-                                </div>
-                                <div class="review-txt fold">
-                                    <p>배송 전에 연락을 꼼꼼하게 주셨고 설치도 깔끔하게 마무리해 주셨어요. 패브릭 촉감이 부드럽지만 형태는 탄탄하게 잡혀 있어 만족스럽습니다. 낮은 실루엣 덕분에 거실이 더 넓어 보이고, 쿠션 깊이가 충분해 편하게 기대어 쉴 수 있어요.</p>
-                                    <button class="btn-rvtxt" type="button" aria-expanded="false">
-                                        <span>더보기</span><span class="review-toggle-icon" aria-hidden="true">⌄</span>
-                                    </button>
-                                </div>
-                                <div class="review-img">
-                                    <ul class="review-gallery">
-                                        <li><img src="./img/l-7.jpg" alt="고객이 촬영한 제품 사용 모습"></li>
-                                        <li><img src="./img/l-8.jpg" alt="조명과 함께 연출한 Lumi 컬렉션"></li>
-                                    </ul>
-                                </div>
-                                <div class="review-etc">
-                                    <button type="button">♡ 유용해요 <span>8</span></button>
-                                    <a href="#">신고/차단</a>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="review-user">
-                                <span class="rev-name">이*은</span>
-                                <span class="rev-date">2026.09.08</span>
-                            </div>
-                            <div class="review-content">
-                                <div class="stars" aria-label="별점 4점">
-                                    <img src="./img/star.svg" alt=""><img src="./img/star.svg" alt=""><img src="./img/star.svg" alt=""><img src="./img/star.svg" alt="">
-                                </div>
-                                <div class="review-txt fold">
-                                    <p>화면에서 본 색상과 거의 같고 마감도 깔끔합니다. 처음에는 생각보다 큰가 싶었지만 모듈 위치를 바꾸니 동선에 잘 맞았어요. 좌방석이 너무 푹 꺼지지 않아 앉고 일어날 때 편하고, 전체적으로 차분한 분위기를 만들어 주는 제품입니다.</p>
-                                    <button class="btn-rvtxt" type="button" aria-expanded="false">
-                                        <span>더보기</span><span class="review-toggle-icon" aria-hidden="true">⌄</span>
-                                    </button>
-                                </div>
-                                <div class="review-img">
-                                    <ul class="review-gallery">
-                                        <li><img src="./img/l-10.jpg" alt="고객이 촬영한 Lumi 소파 디테일"></li>
-                                    </ul>
-                                </div>
-                                <div class="review-etc">
-                                    <button type="button">♡ 유용해요 <span>5</span></button>
                                     <a href="#">신고/차단</a>
                                 </div>
                             </div>

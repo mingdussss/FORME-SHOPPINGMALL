@@ -159,19 +159,6 @@ if (galleryScroller) {
     }, true);
 }
 
-document.querySelectorAll('.btn-rvtxt').forEach((button) => {
-    button.addEventListener('click', () => {
-        const reviewText = button.closest('.review-txt');
-        if (!reviewText) return;
-
-        const isExpanded = reviewText.classList.toggle('fold') === false;
-        const label = button.querySelector('span');
-
-        button.setAttribute('aria-expanded', String(isExpanded));
-        if (label) label.textContent = isExpanded ? '접기' : '더보기';
-    });
-});
-
 const productMenuLinks = document.querySelectorAll('.sticky-product-menu a');
 const productSections = [...productMenuLinks]
     .map((link) => document.querySelector(link.getAttribute('href')))
