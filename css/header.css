@@ -34,6 +34,9 @@ header{
 .logo img{
     height: 6rem;
 }
+.header-top .logo img{
+    transform: scale(0.9);
+}
 .user-menu img{
     height: 1.5rem;
 }
@@ -108,6 +111,9 @@ header{
         background: #fff;
     }
     .logo img{height: 4rem;}
+    .smart-header>.common-frame>.logo img{
+        transform: scale(0.9);
+    }
     .smart-header .common-frame{
         display: flex;
         align-items: center;

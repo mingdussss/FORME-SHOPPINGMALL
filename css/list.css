@@ -1,7 +1,12 @@
 .hero-banner{
     line-height: 0;
 }
+.hero-banner a,
+.hero-banner picture {
+    display: block;
+}
 .hero-banner img{
+    display: block;
     width: 100%;
-
+    height: auto;
 }
